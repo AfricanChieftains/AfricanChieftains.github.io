@@ -72,6 +72,80 @@
     
     
     
+    <article id="post-缓存" class="article article-type-post" itemscope
+  itemprop="blogPost" data-scroll-reveal>
+
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h2 itemprop="name">
+  <a class="article-title" href="/2020/07/26/%E7%BC%93%E5%AD%98/"
+    >缓存</a> 
+</h2>
+ 
+
+    </header>
+    
+
+    
+    <div class="article-meta">
+      <a href="/2020/07/26/%E7%BC%93%E5%AD%98/" class="article-date">
+  <time datetime="2020-07-26T11:55:52.000Z" itemprop="datePublished">2020-07-26</time>
+</a>
+      
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+  </div>
+
+      
+      
+      
+    </div>
+    
+
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+      
+
+      
+      <h1 id="缓存（缓存雪崩，缓存击穿，缓存穿透）"><a href="#缓存（缓存雪崩，缓存击穿，缓存穿透）" class="headerlink" title="缓存（缓存雪崩，缓存击穿，缓存穿透）"></a>缓存（缓存雪崩，缓存击穿，缓存穿透）</h1><p><strong>首先</strong>，什么是缓存，在计算机中，数据的运行方式是  CPU&gt;内存&gt;储存，所以内存是直接与cpu交流的，最接近CPU的，所以内存的效率是很高的，但是，内存是RAM，也就是说，当机器停机或断电情况下，内存会全部消失。</p>
+<p>在日常开发中我们使用的缓存一般是指redis缓存数据库，redis的细节在此不做讲解，后续会出一篇redis的文章，在此篇文章中主要介绍缓存雪崩，缓存击穿，缓存穿透这三个问题。</p>
+<p>​    我们为什么要在项目中添加缓存，直接用数据库查询不好么？一条sql直接搞定，这是我在刚接触到缓存的时候想的问题，为什么呢，首先，缓存有两个主要的用途：<strong>高性能，高并发</strong>，现在是一个高并发的时代，会有很多人同时操作我们的项目，这时，数据库能承受多少的访问量呢？一条sql的select查询需要多久呢？每次我们操作都需要去数据库查询一遍相同的数据是不是重复操作呢？这些重复操作会浪费掉我们多少的性能呢？当有人恶意访问把我们的数据库查崩了会怎么样呢？等等好多的问题，都指向了缓存。</p>
+      
+      <a class="article-more-link" href="/2020/07/26/%E7%BC%93%E5%AD%98/">阅读更多...</a>
+      
+      
+      <!-- reward -->
+      
+    </div>
+    
+    
+      <!-- copyright -->
+      
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+
+  
+  
+  
+
+  
+
+</article>
+    
     <article id="post-单例模式" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
@@ -127,33 +201,9 @@
 <li>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现的链接池溢出。</li>
 <li>如果实例化的对象长时间不被利用，系统会认为该对象时垃圾而被回收，这可能会导致对象状态的丢失。</li>
 </ol>
-<h4 id="1-懒汉式"><a href="#1-懒汉式" class="headerlink" title="1.懒汉式"></a>1.懒汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LanHan</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> LanHan lan;</span><br><span class="line">    <span class="comment">//私有构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">LanHan</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="comment">//判断，当没有创建过对象的时候才会创建新对象</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> LanHan <span class="title">getLan</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(lan==<span class="keyword">null</span>)&#123;</span><br><span class="line">            lan = <span class="keyword">new</span> LanHan;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> lan;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>懒汉式，只有在使用的时候才会创建</p>
-<p><strong>优点：</strong>节省内存空间，只有在真正调用的时候才会实例化对象并调用。</p>
-<p><strong>缺点：</strong>只能在单线程情况下使用，在多线程情况下，一个线程进行if  else  判断的时候还没有进行运算完成，接下来的线城也进入判断，这样便会创建了多个实例，违背了单例模式的设计意义，并且，严格意义上来说，懒汉式并不属于单例模式</p>
-<h4 id="2-饿汉式"><a href="#2-饿汉式" class="headerlink" title="2.饿汉式"></a>2.饿汉式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EHan</span></span>&#123;</span><br><span class="line">    <span class="comment">//创建自己的私有静态对象</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> EHan eh = <span class="keyword">new</span> EHan();</span><br><span class="line">    <span class="comment">//私有构造器</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">EHan</span><span class="params">()</span></span>&#123;&#125;</span><br><span class="line">    <span class="comment">//返回自己实例的静态公有方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> EHan <span class="title">getEH</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> en;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>饿汉式，在初始化时已经创建好，不管是否调用</p>
-<p><strong>优点：</strong>在整个生命周期只会被加载一次，只会创建一个实例，这种写法很简单，避免了线程同步的问题</p>
-<p><strong>缺点：</strong>在类装载的时候就完成实例化，如果始终没有调用的话，会浪费内存</p>
-<h4 id="3-双重加锁机制"><a href="#3-双重加锁机制" class="headerlink" title="3.双重加锁机制"></a>3.双重加锁机制</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">twoLwtion</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> twoLwtion instance;</span><br><span class="line">     <span class="keyword">private</span> <span class="keyword">static</span> readonly object syncRoot = <span class="keyword">new</span> object();</span><br><span class="line">        <span class="function"><span class="keyword">private</span> <span class="title">twoLwtion</span><span class="params">()</span> </span>&#123; &#125;</span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> twoLwtion <span class="title">GetInstance</span><span class="params">()</span></span></span><br><span class="line"><span class="function">        </span>&#123;</span><br><span class="line">            <span class="comment">//先判断是否存在，不存在再加锁处理</span></span><br><span class="line">            <span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="comment">//在同一个时刻加了锁的那部分程序只有一个线程可以进入</span></span><br><span class="line">                lock (syncRoot)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span> (instance == <span class="keyword">null</span>)</span><br><span class="line">                    &#123;</span><br><span class="line">                        instance = <span class="keyword">new</span> Singleton();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> instance;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>知识点：</strong>lock锁</p>
-<p>Double-Check概念，进行了两次if检测，这样可以保证线程安全，这样实例化代码只用执行一次，后面再次访问时，判断singleton==null直接返回实例化对象</p>
-<p>使用双重检测同步延迟加载去创建单例模式是一种非常优秀的做法，不但保持了单例，还切实提高了程序运行效率</p>
-<p><strong>优点：</strong>线城安全，延迟加载，效率高</p>
-<h4 id="4-静态初始化"><a href="#4-静态初始化" class="headerlink" title="4.静态初始化"></a>4.静态初始化</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">staticleton</span> </span>&#123; </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">staticleton</span><span class="params">()</span></span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">      <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> staticleton <span class="title">getInstance</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> Inner.instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">Inner</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> Singleton instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>只有第一次调用getInstance方法时，虚拟机才加载 Inner 并初始化instance ，只有一个线程可以获得对象的初始化锁，其他线程无法进行初始化，保证对象的唯一性。目前此方式是所有单例模式中最推荐的模式，但具体还是根据项目选择。</p>
-<p><strong>优点：</strong>利用了classloader机制来保证初始化instance时只有一个线程，线程安全且没有性能损耗</p>
-<h4 id="5-枚举单例模式"><a href="#5-枚举单例模式" class="headerlink" title="5.枚举单例模式"></a>5.枚举单例模式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> Singleton  &#123;</span><br><span class="line">    INSTANCE </span><br><span class="line"> </span><br><span class="line">    <span class="comment">//doSomething 该实例支持的行为</span></span><br><span class="line">      </span><br><span class="line">    <span class="comment">//可以省略此方法，通过Singleton.INSTANCE进行操作</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton get <span class="title">Instance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> Singleton.INSTANCE;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>枚举类单例模式是日常开发中比较少用到的单例模式，原因是可读性较差</p>
-<p><strong>优点：</strong>不仅可以解决多线程同步问题，还能有效防止反序列化重新创建新的对象</p>
-<p><strong>缺点：</strong> jdk1.5中加入了enum，不常用，并且可读性差</p>
-<h2 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h2><p>目前来说，比较推荐的是静态内部类单例模式</p>
-
+      
+      <a class="article-more-link" href="/2020/07/18/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">阅读更多...</a>
+      
       
       <!-- reward -->
       
