@@ -9,7 +9,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-     爱吃猫粮的哈士奇的个人博客
+    java数据类型 |  爱吃猫粮的哈士奇的个人博客
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -32,217 +32,17 @@
 <body>
   <div id="app">
     <main class="content on">
-      
-<section class="cover">
-    
-      
-      <a class="forkMe" href="https://github.com/AfricanChieftains"
-        target="_blank"><img width="149" height="149" src="/images/forkme.png"
-          class="attachment-full size-full" alt="Fork me on GitHub" data-recalc-dims="1"></a>
-    
-  <div class="cover-frame">
-    <div class="bg-box">
-      <img src="/images/cover1.jpg" alt="image frame" />
-    </div>
-    <div class="cover-inner text-center text-white">
-      <h1><a href="/">爱吃猫粮的哈士奇的个人博客</a></h1>
-      <div id="subtitle-box">
-        
-        <span id="subtitle"></span>
-        
-      </div>
-      <div>
-        
-      </div>
-    </div>
-  </div>
-  <div class="cover-learn-more">
-    <a href="javascript:void(0)" class="anchor"><i class="ri-arrow-down-line"></i></a>
-  </div>
-</section>
-
-
-
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11/lib/typed.min.js"></script>
-
-<div id="main">
-  <section class="outer">
-  <article class="articles">
-    
-    
-    
-    
-    <article id="post-缓存" class="article article-type-post" itemscope
+      <section class="outer">
+  <article id="post-java数据类型" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
     
     <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/07/26/%E7%BC%93%E5%AD%98/"
-    >缓存</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/07/26/%E7%BC%93%E5%AD%98/" class="article-date">
-  <time datetime="2020-07-26T11:55:52.000Z" itemprop="datePublished">2020-07-26</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="缓存（缓存雪崩，缓存击穿，缓存穿透）"><a href="#缓存（缓存雪崩，缓存击穿，缓存穿透）" class="headerlink" title="缓存（缓存雪崩，缓存击穿，缓存穿透）"></a>缓存（缓存雪崩，缓存击穿，缓存穿透）</h1><p><strong>首先</strong>，什么是缓存，在计算机中，数据的运行方式是  CPU&gt;内存&gt;储存，所以内存是直接与cpu交流的，最接近CPU的，所以内存的效率是很高的，但是，内存是RAM，也就是说，当机器停机或断电情况下，内存会全部消失。</p>
-<p>在日常开发中我们使用的缓存一般是指redis缓存数据库，redis的细节在此不做讲解，后续会出一篇redis的文章，在此篇文章中主要介绍缓存雪崩，缓存击穿，缓存穿透这三个问题。</p>
-<p>​    我们为什么要在项目中添加缓存，直接用数据库查询不好么？一条sql直接搞定，这是我在刚接触到缓存的时候想的问题，为什么呢，首先，缓存有两个主要的用途：<strong>高性能，高并发</strong>，现在是一个高并发的时代，会有很多人同时操作我们的项目，这时，数据库能承受多少的访问量呢？一条sql的select查询需要多久呢？每次我们操作都需要去数据库查询一遍相同的数据是不是重复操作呢？这些重复操作会浪费掉我们多少的性能呢？当有人恶意访问把我们的数据库查崩了会怎么样呢？等等好多的问题，都指向了缓存。</p>
-      
-      <a class="article-more-link" href="/2020/07/26/%E7%BC%93%E5%AD%98/">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="tag">学习笔记</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-单例模式" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/07/18/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/"
-    >单例模式</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/07/18/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-date">
-  <time datetime="2020-07-18T12:38:03.000Z" itemprop="datePublished">2020-07-18</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h1><p>Java的设计模式一共有23中，今天我们说单例模式，单例模式是一种最常见的设计模式，在springmvc中bean的注入使用的就是单例模式。</p>
-<p>单例模式，只能存在一个实例，并且自己创建自己的对象，这个类提供了一个访问这个对象的唯一方式，可直接访问，不需要通过new来创建一个新的对象，单例模式一共有五种创建方式，下面分别查看这几种方式。</p>
-<p><strong>单例模式的优点：</strong></p>
-<ol>
-<li>内存中只有一个对象，节省内存空间。</li>
-<li>避免频繁的创建销毁对象，可以提高性能。</li>
-<li>避免对共享资源的多重占用，简化访问。</li>
-<li>为整个系统提供一个全局访问点。</li>
-</ol>
-<p><strong>单例模式的缺点：</strong></p>
-<ol>
-<li>不适用于变化频繁的对象。</li>
-<li>滥用单例将带来一些负面问题，如为了节省资源将数据库连接池对象设计为的单例类，可能会导致共享连接池对象的程序过多而出现的链接池溢出。</li>
-<li>如果实例化的对象长时间不被利用，系统会认为该对象时垃圾而被回收，这可能会导致对象状态的丢失。</li>
-</ol>
-      
-      <a class="article-more-link" href="/2020/07/18/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-java数据类型" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/07/02/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"
-    >java数据类型</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  java数据类型
+</h1>
  
 
     </header>
@@ -260,9 +60,34 @@
 
       
       
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> 字数统计:</span>
+            <span class="post-count">3.5k字</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> 阅读时长≈</span>
+            <span class="post-count">12分钟</span>
+        </span>
+    </span>
+</div>
+
       
     </div>
     
+
+    
+    
+
+
+
 
     
 
@@ -631,270 +456,160 @@
     
       <!-- copyright -->
       
+        <div class="declare">
+          <ul class="post-copyright">
+            <li>
+              <i class="ri-copyright-line"></i>
+              <strong>版权声明： </strong s>
+              本博客所有文章除特别声明外，均采用 <a href="https://www.apache.org/licenses/LICENSE-2.0.html" rel="external nofollow"
+                target="_blank">Apache License 2.0</a> 许可协议。转载请注明出处！
+            </li>
+          </ul>
+        </div>
+        
     <footer class="article-footer">
       
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-装箱，拆箱" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/05/25/%E8%A3%85%E7%AE%B1%EF%BC%8C%E6%8B%86%E7%AE%B1/"
-    >装箱，拆箱</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/05/25/%E8%A3%85%E7%AE%B1%EF%BC%8C%E6%8B%86%E7%AE%B1/" class="article-date">
-  <time datetime="2020-05-25T12:45:33.000Z" itemprop="datePublished">2020-05-25</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="装箱和拆箱"><a href="#装箱和拆箱" class="headerlink" title="装箱和拆箱"></a>装箱和拆箱</h1><h2 id="装箱-java中将这个机制设置为自动"><a href="#装箱-java中将这个机制设置为自动" class="headerlink" title="装箱(java中将这个机制设置为自动)"></a>装箱(java中将这个机制设置为自动)</h2><ul>
-<li>装箱的概念为将基本数据类型转换为包装类型</li>
-<li>构造函数：可用于将基本类型转换为包装器类型</li>
-<li>valueOf()：可用于将基本类型转换为包装器类型</li>
-<li>自动装箱<ul>
-<li>int x= 1; Integer y = x;</li>
-<li>public void demo(Integer a){} int x = 1; demo(x);</li>
-</ul>
-</li>
-</ul>
-<h2 id="拆箱-java中将这个机制设置为自动"><a href="#拆箱-java中将这个机制设置为自动" class="headerlink" title="拆箱(java中将这个机制设置为自动)"></a>拆箱(java中将这个机制设置为自动)</h2><ul>
-<li>拆箱的概念为将包装器类型转换成基本数据类型</li>
-<li>byteValue()、shortValue()等xxxValue()方法：可用于将包装器类型转换为基本数据类型</li>
-<li>parseInt()等parseXxx()方法：可用于将String对象转换为基本数据类型</li>
-<li>toString()方法：由Object对象继承而来，用于将包装器类型转换为String类型</li>
-<li>自动拆箱<ul>
-<li>Integer x = new Integer(1); int y = x ;</li>
-</ul>
-</li>
-</ul>
-
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-数据库事务" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/"
-    >数据库事务</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/" class="article-date">
-  <time datetime="2020-04-03T13:36:06.000Z" itemprop="datePublished">2020-04-03</time>
-</a>
-      
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
-  </div>
-
-      
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <h1 id="数据库事务"><a href="#数据库事务" class="headerlink" title="数据库事务"></a>数据库事务</h1><h2 id="四大特性"><a href="#四大特性" class="headerlink" title="四大特性"></a>四大特性</h2><h3 id="原子性"><a href="#原子性" class="headerlink" title="原子性"></a>原子性</h3><p>整个操作看成为一个整体，要么成功，要么失败，有一个回滚机制</p>
-<h3 id="隔离性"><a href="#隔离性" class="headerlink" title="隔离性"></a>隔离性</h3><p>这里涉及到了数据库锁<br>排他锁<br>X锁，写锁<br>共享锁<br>S锁，读锁<br>可能会有多个线程同时访问同一条数据，这样数据库会出现一条数据多方调用，这么做会产生数据的更新丢失，<br>为了压制数据更新丢失，数据库标准提出了四类隔离级别</p>
-      
-      <a class="article-more-link" href="/2020/04/03/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BA%8B%E5%8A%A1/">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-    <article id="post-about" class="article article-type-post" itemscope
-  itemprop="blogPost" data-scroll-reveal>
-
-  <div class="article-inner">
-    
-    <header class="article-header">
-       
-<h2 itemprop="name">
-  <a class="article-title" href="/2020/04/01/about/"
-    >关于我</a> 
-</h2>
- 
-
-    </header>
-    
-
-    
-    <div class="article-meta">
-      <a href="/2020/04/01/about/" class="article-date">
-  <time datetime="2020-04-01T13:37:04.000Z" itemprop="datePublished">2020-04-01</time>
-</a>
-      
-      
-    </div>
-    
-
-    
-
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-      
-
-      
-      <blockquote>
-<p>一个一天到晚瞎心思的coder</p>
-</blockquote>
-<p>姓名：赵阳</p>
-<p>现居：北京</p>
-<p>职业：后端研发攻城狮</p>
-<p>GitHub: <a href="https://github.com/AfricanChieftains" target="_blank" rel="noopener">AfricanChieftains</a></p>
-<!-- twitter: [shenyu1995](https://twitter.com/shenyu1995) -->
-<!-- QQ: [448766534](http://wpa.qq.com/msgrd?v=3&uin=448766534&site=qq&menu=yes) -->
-<p>微信: 13091663023</p>
-      
-      <a class="article-more-link" href="/2020/04/01/about/">阅读更多...</a>
-      
-      
-      <!-- reward -->
-      
-    </div>
-    
-    
-      <!-- copyright -->
-      
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/about/" rel="tag">about</a></li></ul>
-
-
-    </footer>
-
-  </div>
-
-  
-
-  
-  
-  
-
-  
-
-</article>
-    
-  </article>
-  
-
-  
-</section>
+          
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
 </div>
 
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/07/02/java%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java%E5%9F%BA%E7%A1%80/" rel="tag">Java基础</a></li></ul>
+
+
+    </footer>
+
+  </div>
+
+  
+  
+  <nav class="article-nav">
+    
+      <a href="/2020/07/18/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" class="article-nav-link">
+        <strong class="article-nav-caption">上一篇</strong>
+        <div class="article-nav-title">
+          
+            单例模式
+          
+        </div>
+      </a>
+    
+    
+      <a href="/2020/05/25/%E8%A3%85%E7%AE%B1%EF%BC%8C%E6%8B%86%E7%AE%B1/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">装箱，拆箱</div>
+      </a>
+    
+  </nav>
+
+
+  
+
+  
+  
+<!-- valine评论 -->
+<div id="vcomments-box">
+    <div id="vcomments">
+    </div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        app_id: '',
+        app_key: '',
+        path: window.location.pathname,
+        notify: 'false',
+        verify: 'false',
+        avatar: 'mp',
+        placeholder: '给我的文章加点评论吧~',
+        recordIP: true
+    });
+    const infoEle = document.querySelector('#vcomments .info');
+    if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+        infoEle.childNodes.forEach(function (item) {
+            item.parentNode.removeChild(item);
+        });
+    }
+</script>
+<style>
+    #vcomments-box {
+        padding: 5px 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+        #vcomments-box {
+            padding: 5px 0px;
+        }
+    }
+
+    #vcomments-box #vcomments {
+        background-color: #fff;
+    }
+
+    .v .vlist .vcard .vh {
+        padding-right: 20px;
+    }
+
+    .v .vlist .vcard {
+        padding-left: 10px;
+    }
+</style>
+
+  
+
+  
+  
+  
+
+</article>
+</section>
       <footer class="footer">
   <div class="outer">
     <ul class="list-inline">
@@ -1056,6 +771,24 @@
 </script>
 
 
+
+
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  // Tocbot_v4.7.0  http://tscanlin.github.io/tocbot/
+  tocbot.init({
+    tocSelector: '.tocbot',
+    contentSelector: '.article-entry',
+    headingSelector: 'h1, h2, h3, h4, h5, h6',
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: 'main',
+    positionFixedSelector: '.tocbot',
+    positionFixedClass: 'is-position-fixed',
+    fixedSidebarOffset: 'auto'
+  });
+</script>
 
 
 
